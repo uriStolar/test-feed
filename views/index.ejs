@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test-feed</title>
+</head>
+<body>
+    <h1>Carengo test-feed</h1>
+    <ul>
+        <% for(var i= 0; i<products.length; i++){ %>
+            <li>
+                <h3><%= products[i].titulo %></h3>
+                <p><small>
+                    <%= products[i].descripcion%>
+                </small></p>
+                <strong>$ <%= products[i].precio %></strong>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

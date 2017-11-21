@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/uriStolar/test-feed#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "helmet": "^3.9.0",
     "morgan": "^1.9.0",
     "serve-favicon": "^2.4.5"
   },
