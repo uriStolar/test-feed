@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <header class="main-header">
+        <h1>Carengo test-feed</h1>
+        <span>{{products.length}} de {{total}} productos</span>
+        <br><br>
+    </header>
+    <hr>
+    <div class="content" infinite-scroll="getMoreProducts()" infinite-scroll-distance="0">
+        <div class="card" ng-repeat="prod in products">
+
+            <span class="card-title">{{prod.titulo}}</span>
+            <hr>
+            <img src="http://via.placeholder.com/300/8cf442/4b4f48&text={{prod.imagen}}" alt="{{prod.titulo}}" class="product-img">
+            <div class="info">
+                <p><small>{{prod.descripcion}}</small></p>
+                <span>
+                    Renta por día:
+                    <strong id="price">{{prod.precio | currency : "MXN $" : 2}}</strong>
+                </span>    
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <footer class="main-footer">Hecho con ❤ por Uri Stolar</footer>
+</div>

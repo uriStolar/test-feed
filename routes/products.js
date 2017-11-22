@@ -11,7 +11,10 @@ module.exports = function (app, express) {
     app.get('/api/products', (req, res) => {
         let limit = parseInt(req.query.limit, 10) <= 20 ? parseInt(req.query.limit, 10) : 20;
         let skip = parseInt(req.query.skip,10) || 0;
-        return res.json(productFunctions.getProducts(limit, skip));
+        return res.json({
+            productos:productFunctions.getProducts(limit, skip),
+            total: productFunctions.getTotalProducts()
+        });
     });
     return apiRouter;
 };

@@ -1,3 +1,61 @@
-body {
+* {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    background-color: white;
+}
+
+.card >img {
+    height: auto;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.main-header{
+    grid-area: header;
+    background-color:lightgrey;
+    color: black
+}
+
+.content{
+    grid-area: content;
+}
+
+.main-footer{
+    grid-area: footer;
+}
+
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+}
+
+#price{
+    color: #B12704
+}
+
+@media (max-width: 360px) and (max-height: 640px){
+    .product-img{
+        display: block;
+        width: 60%;
+        height: auto;
+    }
+    body{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 800px){
+    body{
+        font-size: 1.5em;
+    }
 }
